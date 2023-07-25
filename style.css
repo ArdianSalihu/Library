@@ -15,6 +15,7 @@ header .header-container {
     align-items: center;
     background-color: white;
     padding: 20px 0;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .header-container .header-login {
@@ -48,4 +49,64 @@ header .header-container {
 .add-book-button:hover {
     cursor: pointer;
     background-color: rgba(196, 192, 192, 0.42);
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 490px;
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content h2 {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+#addBookForm h2,
+#addBookForm button {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#addBookForm button {
+    font-size: 18px;
+    border-radius: 5px;
+    border: 0;
+    background-color: rgba(2, 234, 2, 0.446);
+    padding: 8px 0;
+    margin-bottom: 15px;
+}
+
+#addBookForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid red;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    font-size: 15px;
+    padding: 10px 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 5px;
+    border: 0;
 }
