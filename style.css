@@ -2,4 +2,50 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: rgb(240, 239, 239);
+}
+
+header .header-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    padding: 20px 0;
+}
+
+.header-container .header-login {
+    padding: 12px;
+    border-radius: 5px;
+    border: 0px;
+    transition: background-color 0.2s;
+    font-weight: 900;
+}
+
+.header-login:hover {
+    cursor: pointer;
+    background-color: rgb(215, 215, 215);
+}
+
+.content .content-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.add-book-button {
+    border: 0;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-weight: 900;
+    transition: background-color 0.2s;
+}
+
+.add-book-button:hover {
+    cursor: pointer;
+    background-color: rgba(196, 192, 192, 0.42);
 }
