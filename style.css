@@ -16,6 +16,7 @@ header .header-container {
     background-color: white;
     padding: 20px 0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
 }
 
 .header-container .header-login {
@@ -57,6 +58,16 @@ header .header-container {
     margin-top: 490px;
 }
 
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.1);
+    display: none;
+    z-index: 10;
+    transition: 200ms ease-in-out;
+}
+
 .modal-content {
     display: flex;
     flex-direction: column;
@@ -87,13 +98,15 @@ header .header-container {
 }
 
 #addBookForm {
+    z-index: 3;
     display: flex;
+    transition: 200ms ease-in-out;
     flex-direction: column;
     gap: 10px;
-    border: 1px solid red;
     height: 100%;
     border-radius: 5px;
-}
+    background-color: rgb(240, 239, 239);
+} 
 
 .checkbox-container {
     display: flex;
@@ -109,4 +122,21 @@ input[type="number"] {
     margin-right: 10px;
     border-radius: 5px;
     border: 0;
+}
+
+#overlay {
+    transition: 200ms ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .5);
+    display: none;
+}
+
+
+.zoom-in {
+    transform: translate(-50%, -50%) scale(1);
+    transition: 200ms ease-in-out;
 }

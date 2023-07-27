@@ -22,24 +22,26 @@
         </div>
     </div>
 
-    <div class="modal" id="addBookModal">
-        <div class="modal-content">
-            <form id="addBookForm">
-                <h2>Add New Book</h2>
-                <label for="title"></label>
-                <input type="text" id="title" placeholder="Title" required>
-                <label for="author"></label>
-                <input type="text" id="author" placeholder="Author" required>
-                <label for="pages"></label>
-                <input type="number" id="pages" placeholder="Pages" required>
-                <div class="checkbox-container">
-                <label for="is-read">Have you read it?</label>
-                <input class="checkbox" type="checkbox" id="is-read">
-                </div>
-                <button type="submit">Add Book</button>
-            </form>
+        <div class="modal" id="addBookModal">
+            <div class="modal-content">
+                <form class="add-book-form-active" id="addBookForm">
+                    <h2>Add New Book</h2>
+                    <label for="title"></label>
+                    <input type="text" id="title" placeholder="Title" required>
+                    <label for="author"></label>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <label for="pages"></label>
+                    <input type="number" max="21450" id="pages" placeholder="Pages" required>
+                    <div class="checkbox-container">
+                        <label for="is-read">Have you read it?</label>
+                        <input class="checkbox" type="checkbox" id="is-read">
+                    </div>
+                    <button type="submit">Add Book</button>
+                </form>
+            </div>
         </div>
-    </div>
+        
+        <div id="overlay"></div>
 
     <footer class="copyright-container">
         <p class="footer-text">Copyright © 2023 Ardian Salihu</p>
