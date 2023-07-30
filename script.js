@@ -36,8 +36,6 @@ addBookForm.addEventListener("submit", (e) => {
         return;
     }
 
-
-
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const isRead = document.getElementById("is-read").checked;
@@ -63,6 +61,13 @@ addBookForm.addEventListener("submit", (e) => {
     addBookModal.style.display = "none";
     overlay.style.display = "none";
   });
+  
+  function removeBookFromLibrary(title) {
+    const index = library.findIndex((book) => book.title === title);
+    if (index !== -1) {
+        library.splice(index, 1)
+    }
+}
 
   function createBookCard(book) {
     const booksContainer = document.getElementById("booksContainer");
@@ -93,9 +98,9 @@ addBookForm.addEventListener("submit", (e) => {
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
-    removeButton.classList.add("remove-button")
     removeButton.addEventListener("click", () => {
-        booksContainer.removeChild(bookCard);
+        removeBookFromLibrary(book.title);
+        bookCard.remove();
     })
 
     bookCard.appendChild(removeButton);
