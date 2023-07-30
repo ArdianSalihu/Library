@@ -51,6 +51,8 @@ addBookForm.addEventListener("submit", (e) => {
   });
 
   function createBookCard(book) {
+    const booksContainer = document.getElementById("booksContainer");
+
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
 
@@ -70,10 +72,9 @@ addBookForm.addEventListener("submit", (e) => {
     isReadElement.textContent = book.isRead ? "Read" : "Not Read";
     bookCard.appendChild(isReadElement);
 
-    booksGrid.appendChild(bookCard);
-  }
+    booksContainer.appendChild(bookCard);
+}
 
-  // Replace this with your actual function to add the book to your library
-  function addBookToLibrary(book) {
-    // Your implementation to add the book to your library goes here
-  }
+function addBookToLibrary(book) {
+
+}
