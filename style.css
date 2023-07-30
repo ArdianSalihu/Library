@@ -57,7 +57,7 @@ header .header-container {
 .copyright-container {
     display: flex;
     justify-content: center;
-    margin-top: 490px;
+    margin-top: 485px;
 }
 
 .modal {
@@ -186,18 +186,30 @@ button:hover {
 
 button[data-read="false"] {
     background-color: rgba(220, 44, 44, 0.572);
+    font-weight: 900;
 }
 
 button[data-read="false"]:hover {
     background-color: rgba(208, 12, 12, 0.572);
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
 }
 
 button[data-read="true"] {
     background-color: rgba(88, 247, 88, 0.572);
+    font-weight: 900;
 }
 
 button[data-read="true"]:hover {
     background-color: rgba(16, 226, 16, 0.572);
-    transition: background-color 0.3s;
+    transition: background-color 0.2s;
+}
+
+.remove-button {
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.remove-button:hover {
+    background-color: rgb(215, 215, 215);
+    transition: background-color 0.2s;
 }

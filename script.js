@@ -77,6 +77,16 @@ addBookForm.addEventListener("submit", (e) => {
         isReadButton.textContent = book.isRead ? "Read" : "Not Read";
         isReadButton.setAttribute("data-read", book.isRead)
     })
+
+    const removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.classList.add("remove-button")
+    removeButton.addEventListener("click", () => {
+        booksContainer.removeChild(bookCard);
+    })
+
+    bookCard.appendChild(removeButton);
+
     bookCard.appendChild(isReadButton);
 
     booksContainer.appendChild(bookCard);
