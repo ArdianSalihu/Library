@@ -16,7 +16,6 @@ header .header-container {
     background-color: white;
     padding: 20px 0;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    
 }
 
 .header-container .header-login {
@@ -24,6 +23,7 @@ header .header-container {
     border-radius: 5px;
     border: 0px;
     transition: background-color 0.2s;
+    background-color: rgb(240, 239, 239);
     font-weight: 900;
 }
 
@@ -45,6 +45,8 @@ header .header-container {
     padding: 10px 10px;
     font-weight: 900;
     transition: background-color 0.2s;
+    background-color: rgb(240, 239, 239);
+    color: black;
 }
 
 .add-book-button:hover {
@@ -170,4 +172,32 @@ input[type="number"] {
 .book-card p {
     text-align: center;
     margin: 10px 0;
+}
+
+button {
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button[data-read="false"] {
+    background-color: rgba(220, 44, 44, 0.572);
+}
+
+button[data-read="false"]:hover {
+    background-color: rgba(208, 12, 12, 0.572);
+    transition: background-color 0.3s;
+}
+
+button[data-read="true"] {
+    background-color: rgba(88, 247, 88, 0.572);
+}
+
+button[data-read="true"]:hover {
+    background-color: rgba(16, 226, 16, 0.572);
+    transition: background-color 0.3s;
 }

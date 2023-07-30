@@ -38,6 +38,7 @@ addBookForm.addEventListener("submit", (e) => {
         isRead,
     };
 
+
     // Assuming you have a function to add the book to your library
     addBookToLibrary(book);
 
@@ -68,9 +69,15 @@ addBookForm.addEventListener("submit", (e) => {
     pagesElement.textContent = `Pages: ${book.pages}`;
     bookCard.appendChild(pagesElement);
 
-    const isReadElement = document.createElement("p");
-    isReadElement.textContent = book.isRead ? "Read" : "Not Read";
-    bookCard.appendChild(isReadElement);
+    const isReadButton = document.createElement("button");
+    isReadButton.textContent = book.isRead ? "Read" : "Not Read";
+    isReadButton.setAttribute("data-read", book.isRead);
+    isReadButton.addEventListener("click", () => {
+        book.isRead = !book.isRead;
+        isReadButton.textContent = book.isRead ? "Read" : "Not Read";
+        isReadButton.setAttribute("data-read", book.isRead)
+    })
+    bookCard.appendChild(isReadButton);
 
     booksContainer.appendChild(bookCard);
 }
