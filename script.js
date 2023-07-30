@@ -24,9 +24,20 @@ window.addEventListener("click", (event) => {
     }
 });
 
+const library = [];
+
 addBookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = document.getElementById("title").value;
+
+    const existingBook = library.find((book) => book.title === title);
+    if (existingBook) {
+        alert("This book already exists in your library");
+        return;
+    }
+
+
+
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const isRead = document.getElementById("is-read").checked;
@@ -37,6 +48,8 @@ addBookForm.addEventListener("submit", (e) => {
         pages,
         isRead,
     };
+
+    library.push(book);
 
 
     // Assuming you have a function to add the book to your library
