@@ -10,13 +10,46 @@ addBookButton.addEventListener("click", () => {
 
     setTimeout(() => {
         addBookModal.classList.add("zoom-in");
-    }, 1)
+    }, 1);
+
+    
+    const storedTitle = localStorage.getItem("modalTitle");
+    if (storedTitle) {
+        document.getElementById("title").value = storedTitle;
+    }
 });
+
+
+window.addEventListener("click", (event) => {
+    if (event.target === overlay) {
+        closeAddBookModal();
+    }
+});
+
+window.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+        closeAddBookModal();
+    }
+});
+
+function closeAddBookModal() {
+    addBookForm.reset();
+    addBookModal.style.display = "none";
+    overlay.style.display = "none";
+
+    localStorage.removeItem("modalTitle");
+
+    setTimeout(() => {
+        addBookModal.classList.remove("zoom-in");
+    }, 1);
+}
 
 window.addEventListener("click", (event) => {
     if (event.target === overlay) {
         addBookModal.style.display = "none";
         overlay.style.display = "none";
+
+        addBookForm.reset();
 
         setTimeout(() => {
             addBookModal.classList.remove("zoom-in");
@@ -24,11 +57,19 @@ window.addEventListener("click", (event) => {
     }
 });
 
-const library = [];
+const library = JSON.parse(localStorage.getItem("libraryData")) || [];
+
+window.addEventListener("load", () => {
+    library.forEach(book => {
+        createBookCard(book);
+    });
+});
 
 addBookForm.addEventListener("submit", (e) => {
     e.preventDefault();
     const title = document.getElementById("title").value;
+
+    localStorage.setItem("modalTitle", title);
 
     const existingBook = library.find((book) => book.title === title);
     if (existingBook) {
@@ -49,12 +90,15 @@ addBookForm.addEventListener("submit", (e) => {
 
     library.push(book);
 
+    localStorage.setItem("libraryData", JSON.stringify(library));
 
     // Assuming you have a function to add the book to your library
     addBookToLibrary(book);
 
     // Update the UI to display the new book
     createBookCard(book);
+
+    localStorage.removeItem("modalTitle");
 
     // Close the modal and overlay
     addBookForm.reset();
@@ -67,6 +111,8 @@ addBookForm.addEventListener("submit", (e) => {
     if (index !== -1) {
         library.splice(index, 1)
     }
+
+    localStorage.setItem("libraryData", JSON.stringify(library));
 }
 
   function createBookCard(book) {
@@ -111,5 +157,4 @@ addBookForm.addEventListener("submit", (e) => {
 }
 
 function addBookToLibrary(book) {
-
 }
