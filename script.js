@@ -92,15 +92,15 @@ addBookForm.addEventListener("submit", (e) => {
 
     localStorage.setItem("libraryData", JSON.stringify(library));
 
-    // Assuming you have a function to add the book to your library
+
     addBookToLibrary(book);
 
-    // Update the UI to display the new book
+
     createBookCard(book);
 
     localStorage.removeItem("modalTitle");
 
-    // Close the modal and overlay
+    
     addBookForm.reset();
     addBookModal.style.display = "none";
     overlay.style.display = "none";
