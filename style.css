@@ -236,6 +236,13 @@ button[data-read="true"]:hover {
 }
 
 .copyright-container a {
-    color: inherit;
     text-decoration: none;
+}
+
+.copyright-container a:link {
+    color: black;
+}
+
+.copyright-container a:visited {
+    color: black;
 }
