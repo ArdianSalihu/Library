@@ -57,7 +57,7 @@ header .header-container {
 .copyright-container {
     display: flex;
     justify-content: center;
-    margin-top: 485px;
+    margin-top: 460px;
 }
 
 .modal {
@@ -212,4 +212,30 @@ button[data-read="true"]:hover {
 .remove-button:hover {
     background-color: rgb(215, 215, 215);
     transition: background-color 0.2s;
+}
+
+.fa-brands {
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: center bottom;
+    transition: transform 0.5s;
+}
+
+#github-icon {
+    margin-left: 5px;
+    transform-origin: center;
+}
+
+#github-icon:hover {
+    font-size: 22px;
+    cursor: pointer;
+    transform: rotate(360deg);
+    transition: transform 0.5s;
+}
+
+.copyright-container a {
+    color: inherit;
+    text-decoration: none;
 }
