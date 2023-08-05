@@ -214,6 +214,12 @@ button[data-read="true"]:hover {
     transition: background-color 0.2s;
 }
 
+.copyright-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .fa-brands {
     font-size: 20px;
     display: flex;
