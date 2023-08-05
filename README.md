@@ -1,5 +1,10 @@
 ![Screenshot from 2023-08-05 17-22-56](https://github.com/klein528/Library/assets/88459146/4c3e784e-a284-4035-b631-d202e3adac4a)
 
+![GitHub](https://img.shields.io/github/license/klein528/Library?label=license)
+
+![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/klein528/Library)
+
+
 <h1>Description</h1>
 <p>Library management web app to store and visualize your book collection, featuring interactive cards and add-book functionality.</p>
 
